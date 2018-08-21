@@ -51,9 +51,9 @@ public class HelloControllerTest {
     @Test
     public void findUserById() throws Exception {
         mvc.perform(MockMvcRequestBuilders.get("/findUserById?userId={userId}", 1L)
-                        .contentType(MediaType.APPLICATION_JSON_UTF8)
-                        .accept(MediaType.APPLICATION_JSON_UTF8)
-                        .session(session)
+                .contentType(MediaType.APPLICATION_JSON_UTF8)
+                .accept(MediaType.APPLICATION_JSON_UTF8)
+                .session(session)
         )
                 .andDo(MockMvcResultHandlers.print())
                 .andExpect(status().isOk());
