@@ -56,7 +56,6 @@ public class HelloControllerTest {
                         .session(session)
         )
                 .andDo(MockMvcResultHandlers.print())
-                .andExpect(status().isOk())
-                /*.andExpect(jsonPath("$.user.username", is("fangzehao")))*/;
+                .andExpect(status().isOk());
     }
 }
